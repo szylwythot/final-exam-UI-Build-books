@@ -30,9 +30,9 @@ function booksComponent(books, buttonText){
 function header(logo){
     return `
         <header>
-            <h1>${logo}<h1>
+            <h1>${logo}</h1>
             <button>
-                <h2><span class="material-icons">menu</span><h2>
+                <h2><span class="material-icons">menu</span></h2>
             </button>
         </header>
     `;
