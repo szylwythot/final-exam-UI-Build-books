@@ -30,10 +30,10 @@ function booksComponent(books, buttonText){
     `;
 }
 
-function header(){
+function header(logo){
     return `
         <header>
-            <h2 class="title">Best Books<h2>
+            <h2 class="title">${logo}<h2>
             <button>
                 <h2><span class="material-icons">menu</span><h2>
             </button>
@@ -51,7 +51,7 @@ async function loadEvent(){
     // const booksData = fetchBurnedBooks();
 
     const rootElement = document.getElementById("root");
-    rootElement.insertAdjacentHTML('beforeend', header());
+    rootElement.insertAdjacentHTML('beforeend', header(booksData.logo));
     rootElement.insertAdjacentHTML('beforeend', booksComponent(booksData.cards, booksData.button));
 
 }
