@@ -8,12 +8,9 @@ async function fetchBooks(){
 function cardComponent({title, sub, text}, buttonText, key){
     return `
         <div class="book" data-key="${key}">
-            <!--<div class="circle">${key}</div>-->            
-            <h2>${title}</h2>
-            <div class="details">
-                <h3>${sub}</h3>
-                <h4>${text}</h4>
-            </div>
+            <h3 class="author">${sub}</h3>
+            <h2 class="title">${title}</h2>
+            <h4 class="text">${text}</h4>
             <div class="button">
                 <div class="details-text">${buttonText}</div>
                 <span class="material-icons">arrow_forward</span><!--e5c8-->
@@ -33,7 +30,7 @@ function booksComponent(books, buttonText){
 function header(logo){
     return `
         <header>
-            <h2 class="title">${logo}<h2>
+            <h1>${logo}<h1>
             <button>
                 <h2><span class="material-icons">menu</span><h2>
             </button>
