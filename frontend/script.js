@@ -32,7 +32,7 @@ function header(logo){
         <header>
             <h1>${logo}</h1>
             <button>
-                <h2><span class="material-icons">menu</span></h2>
+                <span class="material-icons">menu</span>
             </button>
         </header>
     `;
