@@ -57,7 +57,7 @@ header button {
 }
 
 header button h2 span.material-icons{ /*need to change font size*/
-    align-self: flex-end;
+    /* align-self: flex-end; */
     font-size: 24px;
 }
 
@@ -182,19 +182,10 @@ div.book{
     font-weight: 400;
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 450px) {
 
-    section.books{
-        max-width: 800px;
-    }
-
-}
-
-@media only screen and (max-width: 480px) {
-
-    .books .book{
-        
-        /* width: calc(100% - 80px); */
+    .book{
+        flex-basis: 340px;
     }
 
 }

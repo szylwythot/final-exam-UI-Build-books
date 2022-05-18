@@ -55,4 +55,3 @@ const books = {
 		}
 	]
 }
-console.log(beers);
