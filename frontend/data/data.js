@@ -1,4 +1,4 @@
-const beers = {
+const books = {
 	id: "books",
 	logo: "New York Times Best Sellers",
 	button: "read more",

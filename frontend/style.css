@@ -61,7 +61,7 @@ header button h2 span.material-icons{ /*need to change font size*/
     font-size: 36px;
 }
 
-section.beers{
+section.books{
     /* position: relative;
     top: 120px;
     left: 50%;
@@ -78,7 +78,7 @@ section.beers{
     justify-content: center;
 }
 
-div.beer::before {
+div.book::before {
     content:attr(data-key);
     position: absolute;
     top: -20px;
@@ -99,7 +99,7 @@ div.beer::before {
     color: var(--primary);
 }
 
-div.beer{
+div.book{
     position: relative;
 
     /* width: calc(100% - 80px); */
@@ -119,12 +119,12 @@ div.beer{
 
 }
 
-.beer h2{
+.book h2{
     font-size: 36px;
     font-weight: 400;
 }
 
-.beer .details{
+.book .details{
     height: 68px;
 
     padding-top: 12px;
@@ -132,17 +132,17 @@ div.beer{
     border-top: var(--primary) 1px solid;
 }
 
-.beer h3{
+.book h3{
     font-size: 18px;
     font-weight: 400;
 }
 
-.beer h4{
+.book h4{
     font-size: 18px;
     font-weight: 700;
 }
 
-.beer .button{
+.book .button{
     position: absolute;
     bottom: -10px;
     right: -10px;
@@ -155,7 +155,7 @@ div.beer{
     color: var(--primary);
 }
 
-.beer .button:hover{
+.book .button:hover{
     background-color: var(--primary);
 
     color: var(--secondary);
@@ -163,7 +163,7 @@ div.beer{
     cursor: pointer;
 }
 
-.beer .button div.details-text{
+.book .button div.details-text{
     position: absolute;
     left: 50%;
     top:50%;
@@ -172,7 +172,7 @@ div.beer{
     font-size: 14px;
 }
 
-.beer .button span{
+.book .button span{
     position: absolute;
     right: 5px;
     top: 50%;
@@ -184,7 +184,7 @@ div.beer{
 
 @media only screen and (max-width: 950px) {
 
-    section.beers{
+    section.books{
         max-width: 800px;
     }
 
@@ -192,7 +192,7 @@ div.beer{
 
 @media only screen and (max-width: 480px) {
 
-    .beers .beer{
+    .books .book{
         
         /* width: calc(100% - 80px); */
     }

@@ -1,67 +1,4 @@
-function fetchBurnedBeers(){
-    const beersdata =
-    {
-        "id": "beers",
-        "logo": "Best Beers",
-        "button": "details",
-        "cards": [
-            {
-                "title": "Mango Bay",
-                "sub": "Mad Scientist Beer",
-                "text": "Pale Ale - American"
-            },
-            {
-                "title": "Távoli Galaxis",
-                "sub": "Rothbeer Brewery",
-                "text": "IPA - American"
-            },
-            {
-                "title": "Flying Rabbit AIPA",
-                "sub": "MONYO Brewing Co.",
-                "text": "IPA - American"
-            },
-            {
-                "title": "Liquid Cocaine",
-                "sub": "Mad Scientist Beer",
-                "text": "IPA - Imperial"
-            },
-            {
-                "title": "Organic Chocolate Stout",
-                "sub": "Samuel Smith Old Brewery",
-                "text": "Stout - English"
-            },
-            {
-                "title": "Bracia",
-                "sub": "Thornbridge Brewery",
-                "text": "Strong Ale - English"
-            },
-            {
-                "title": "Oatmeal Stout",
-                "sub": "Samuel Smith Old Brewery",
-                "text": "Stout - Oatmeal"
-            },
-            {
-                "title": "Black Tokyo Horizon",
-                "sub": "BrewDog",
-                "text": "Stout - American Imperial"
-            },
-            {
-                "title": "Vintage Ale",
-                "sub": "Fuller's",
-                "text": "Old Ale"
-            },
-            {
-                "title": "All the Leaves are Brown",
-                "sub": "Tempest Brewing Company",
-                "text": "Brown Ale - American"
-            }
-        ]
-    };
-
-    return beersdata;
-}
-
-async function fetchBeers(){
+async function fetchBooks(){
     const res = await fetch("./frontend/data/data.json");
     const resJson = await res.json(res);
     console.log(resJson);
@@ -70,7 +7,7 @@ async function fetchBeers(){
 
 function cardComponent({title, sub, text}, buttonText, key){
     return `
-        <div class="beer" data-key="${key}">
+        <div class="book" data-key="${key}">
             <!--<div class="circle">${key}</div>-->            
             <h2>${title}</h2>
             <div class="details">
@@ -85,10 +22,10 @@ function cardComponent({title, sub, text}, buttonText, key){
     `;
 }
 
-function beersComponent(beers, buttonText){
+function booksComponent(books, buttonText){
     return `
-        <section class="beers">
-            ${beers.map((beer, index) => cardComponent(beer, buttonText, index+1)).join('')}
+        <section class="books">
+            ${books.map((book, index) => cardComponent(book, buttonText, index+1)).join('')}
         </section>
     `;
 }
@@ -96,7 +33,7 @@ function beersComponent(beers, buttonText){
 function header(){
     return `
         <header>
-            <h2 class="title">Best Beers<h2>
+            <h2 class="title">Best Books<h2>
             <button>
                 <h2><span class="material-icons">menu</span><h2>
             </button>
@@ -106,16 +43,16 @@ function header(){
 
 async function loadEvent(){
 
-    const beersData = await fetchBeers();
-    console.log(beersData);
+    const booksData = await fetchBooks();
+    console.log(booksData);
 
-    // console.log(beers);
+    // console.log(books);
 
-    // const beersData = fetchBurnedBeers();
+    // const booksData = fetchBurnedBooks();
 
     const rootElement = document.getElementById("root");
     rootElement.insertAdjacentHTML('beforeend', header());
-    rootElement.insertAdjacentHTML('beforeend', beersComponent(beersData.cards, beersData.button));
+    rootElement.insertAdjacentHTML('beforeend', booksComponent(booksData.cards, booksData.button));
 
 }
 
