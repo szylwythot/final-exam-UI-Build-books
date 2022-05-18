@@ -1,13 +1,13 @@
 body{
-    --primary: #ffeedf;
-    --secondary: #145434;
+    --primary: #1a24fb;
+    --secondary: #f8f7f3;
 
     width: 100vw;
     min-height: 100vh;
     height: auto;
 
-    background-color: var(--primary);
-    color: var(--secondary);
+    background-color: var(--secondary);
+    color: var(--primary);
 
     font-family:  'Space Grotesk', sans-serif;
     font-weight: 400;
@@ -29,6 +29,7 @@ header{
     z-index: 99;
 
     background-color: var(--primary);
+    color: var(--secondary);
 
     border-bottom: var(--secondary) 1px solid;
 
@@ -42,6 +43,7 @@ header h2.title {
     position: absolute;
     left: 10px;
     top: 50%;
+    text-transform: uppercase;
     transform: translateY(-50%);
     
     font-size: 36px;
@@ -85,7 +87,7 @@ div.beer::before {
     width: 40px;
     height: 40px;
     border-radius: 40px;
-    border: var(--secondary) 2px solid;
+    /* border: var(--secondary) 2px solid; */
 
     display: flex;
     align-items: center;
@@ -93,8 +95,8 @@ div.beer::before {
 
     font-size: 24px;
 
-    background-color: var(--primary);
-    color: var(--secondary);
+    background-color: var(--secondary);
+    color: var(--primary);
 }
 
 div.beer{
@@ -107,6 +109,7 @@ div.beer{
     background-color: var(--secondary);
     
     padding: 50px 40px 50px 40px;
+    border:  1px var(--primary)  solid;
 
     color: var(--primary);
 
@@ -147,19 +150,15 @@ div.beer{
     width: 200px;
     height: 50px;
 
-    background-color: var(--primary);
+    background-color: var(--secondary);
 
-    border: solid var(--secondary) 2px;
-
-    color: var(--secondary);
+    color: var(--primary);
 }
 
 .beer .button:hover{
-    background-color: var(--secondary);
+    background-color: var(--primary);
 
-    border: solid var(--primary) 2px;
-
-    color: var(--primary);
+    color: var(--secondary);
 
     cursor: pointer;
 }
