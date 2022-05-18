@@ -115,6 +115,7 @@ div.book{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 10px;
 
 }
 
@@ -123,14 +124,18 @@ div.book{
     letter-spacing: 0.2em;
     font-weight: 400;
     text-transform: uppercase;
+    flex-grow: 0;
 }
 
 .book .title{
     font-size: 36px;
     font-weight: 700;
+    flex-grow: 1;
 }
 
 .book .text{
+    flex-grow: 1;
+
     font-size: 16px;
     font-weight: 700;
     font-family: var(--secondaryFont);
